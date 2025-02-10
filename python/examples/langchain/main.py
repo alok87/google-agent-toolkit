@@ -17,8 +17,7 @@ llm = AzureChatOpenAI(
 )
 
 google_agent_toolkit = GoogleAgentToolkit(
-    client_id=os.getenv("GOOGLE_CLIENT_ID"),
-    client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
+    api_key=os.getenv("GOOGLE_API_KEY"),
     configuration={
         "actions": {
             "places": {
