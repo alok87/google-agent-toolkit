@@ -1,0 +1,40 @@
+[project]
+name = "google-agent-tool-kit"
+version = "0.1.0"
+description = "google Agent ToolKit"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  {name = "google", email = "support@alok87.in"}
+]
+keywords = ["google", "api", "payments"]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/google/agent-toolkit/issues"
+"Source Code" = "https://github.com/google/agent-toolkit"
+
+[tool.setuptools.packages.find]
+include = ["google_agent_toolkit*"]
+exclude = ["tests*", "examples*"]
+
+[tool.ruff]
+# same as our black config
+line-length = 79
+extend-exclude = ["build"]
+
+[tool.ruff.format]
+# currently the default value, but opt-out in the future
+docstring-code-format = false
+
+[tool.pyright]
+include = [
+  "*",
+]
+exclude = ["build", "**/__pycache__"]
+reportMissingTypeArgument = true
+reportUnnecessaryCast = true
+reportUnnecessaryComparison = true
+reportUnnecessaryContains = true
+reportUnnecessaryIsInstance = true
+reportPrivateImportUsage = true
+reportUnnecessaryTypeIgnoreComment = true
