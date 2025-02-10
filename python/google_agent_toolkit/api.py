@@ -32,7 +32,7 @@ class GoogleAPI(BaseModel):
         )
 
     def run(self, method: str, *args, **kwargs) -> str:
-        if method == "search_flights":
+        if method == "search_places":
             return json.dumps(
                 search_places(
                     self._context,
