@@ -6,3 +6,5 @@ pyright==1.1.350
 python-dotenv==1.0.1
 ruff==0.4.4
 langgraph
+googlemaps
+
